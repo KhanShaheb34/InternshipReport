@@ -1,12 +1,12 @@
-    %   The project stems from the template for the title page created by Marco Antonio Corallo, whom I thank. Here are some comments to highlight the presence of some packages that were useful to me for the writing of the thesis. Clearly, it all depends on the type of work one wants to perform, which also determines the different needs. While writing, I spent a lot of time on sites and forums trying to fix some formatting issues, but in general Latex was pretty versatile.
 
-% Type of document. Using twoside implies that chapters always start with the first page on the left, possibly leaving a blank page in the previous chapter. If this thing is bothersome, you can remove it.
-\documentclass[a4paper, twoside,openright]{report}
+\documentclass[a4paper, twoside]{report}
 
 % Size of the margins
 \usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm]{geometry} 
 % Font size
 \usepackage[fontsize=13pt]{scrextend}
+% For vscode errors
+\usepackage{lmodern}
 % Language of the text
 \usepackage[english]{babel}
 % Language for the bibliography
@@ -40,21 +40,19 @@
 % Different types of underlines
 \usepackage[normalem]{ulem}
 
+
 % -----------------------------------------------------------------
 
 % Change the header style
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\rightmark}
-\rhead{\textbf{\thepage}}
-\fancyfoot{}
-\setlength{\headheight}{12.5pt}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 
 % Removes the page number at the beginning of chapters
 \fancypagestyle{plain}{
   \fancyfoot{}
   \fancyhead{}
-  \renewcommand{\headrulewidth}{0pt}
 }
 
 % Code style
@@ -162,8 +160,8 @@
 \include{chapters/AppendixA}
 
 
-\bibliographystyle{plain}
-\bibliography{chapters/Biblio.bib}
+% \bibliographystyle{plain}
+% \bibliography{chapters/Biblio.bib}
 
 \end{document}
 % -----------------------------------------------------------------
