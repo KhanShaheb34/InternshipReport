@@ -1,10 +1,13 @@
 
-\documentclass[a4paper, twoside]{report}
+% !TEX program = xelatex
+\documentclass[11pt, a4paper]{report}
 
 % Size of the margins
-\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm]{geometry} 
+\usepackage[a4paper,top=3cm,bottom=3cm,left=4cm,right=4cm]{geometry} 
 % Font size
-\usepackage[fontsize=13pt]{scrextend}
+% \usepackage[fontsize=1pt]{scrextend}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
 % For vscode errors
 \usepackage{lmodern}
 % Language of the text
@@ -12,9 +15,9 @@
 % Language for the bibliography
 \usepackage[fixlanguage]{babelbib}
 % Text encoding
-\usepackage[utf8]{inputenc} 
+% \usepackage[utf8]{inputenc} 
 % Text encoding
-\usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc}
 % Allows you to generate dummy text. It was useful to me
 % to understand what the setting of the
 % text on the page before I wrote a certain paragraph
@@ -146,6 +149,7 @@
 \begin{document}
 
 \include{chapters/Frontpage}
+\include{chapters/LetterOfTransmittal}
 \include{chapters/Abstract}
 
 \tableofcontents

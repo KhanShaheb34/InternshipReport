@@ -1,1 +1,1 @@
-watchexec -r -e tex,jpg,jpeg,png,bib -- "texi2pdf -q main.tex && rm -f **/*.aux *.aux *.bbl *.blg *.fdb_latexmk *.fls *.log *.out *.toc"
+watchexec -r -e tex,jpg,jpeg,png,bib -- "xelatex -q main.tex && rm -f **/*.aux *.aux *.bbl *.blg *.fdb_latexmk *.fls *.log *.out *.toc"
